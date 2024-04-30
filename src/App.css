@@ -1,0 +1,230 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.product-container {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.product-item {
+  text-align: center;
+  width: 95%; /* 33.33% width cho mỗi item */
+  margin: 10px; /* Khoảng cách giữa các item */
+  border: 1px solid #ccc; /* Đường viền */
+  border-radius: 10px;
+}
+.header-form{
+  width: 100%;
+  background-color: #3535de;
+  color: white;
+  padding: 5px 0;
+  font-size: 23px;
+  border-top-left-radius: 10px; /* Border radius phía trên bên trái */
+  border-top-right-radius: 10px; /* Border radius phía trên bên phải */
+
+}
+@media screen and (max-width: 600px) {
+  .product-container {
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .product-item {
+    width: 100%; /* 33.33% width cho mỗi item */
+    margin: 10px; /* Khoảng cách giữa các item */
+    border: 1px solid #ccc; /* Đường viền */
+
+  }
+}
+
+
+.product-item > div {
+  margin-bottom: 5px; /* Khoảng cách giữa các dòng trong mỗi item */
+}
+
+.buy-form {
+  background-color: #3535de; /* Màu nền của button */
+  color: #fff; /* Màu chữ của button */
+  border: none; /* Loại bỏ đường viền */
+  padding: 10px 20px; /* Khoảng cách từ nội dung đến viền */
+  cursor: pointer; /* Biểu tượng chuột khi di chuột vào button */
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.buy-form:hover {
+  background-color: #0056b3; /* Màu nền của button khi di chuột vào */
+  color: white;
+}
+
+#service-list{
+  padding: 50px 0;
+  width: 50%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.service-item {
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.service-item.active {
+  background-color: #ffcc00; /* Màu nền khi được chọn */
+}
+
+#service-list .active{
+  background-color: gray;
+  color: white;
+}
+@media screen and (max-width: 600px) {
+  #service-list{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-success {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.success-container {
+  margin-top: 20%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 600px;
+  padding: 20px;
+  border: 2px solid #4caf50;
+  border-radius: 10px;
+  background-color: #dff0d8;
+  color: #4f8a10;
+}
+
+
+
+.form-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.image-container {
+  width: 70%;
+
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.form-container {
+  width: 30%;
+  padding: 20px;
+}
+
+form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+
+@media screen and (max-width: 600px) {
+  .form-login {
+    display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-top: 30px;
+  }
+  .form-container{
+    width: 80%;
+  }
+}
